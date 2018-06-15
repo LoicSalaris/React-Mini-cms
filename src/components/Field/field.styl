@@ -1,0 +1,43 @@
+@import '~/styles/vars'
+
+@keyframes fadeInLabel
+	0%
+		transform: translateY(1em)
+		opacity: 0
+
+.app-field
+	position: relative
+
+	&-input
+		font-size: 1.1em
+		padding: 1em
+		width: 100%
+		margin-bottom: .25em
+		border: 1px solid $color-input-border
+
+		&:placeholder
+		  color: $color-input-placeholder
+
+		&:focus
+			border: 1px solid $color-input-border--focus
+
+	&-input:focus + &-label
+		color: $color-input-label--focus
+
+	&-label
+		display: none
+		position: absolute
+		top: 0.75em
+		left: 1.5em
+		font-size: 0.8em
+		font-family: "Source Sans Pro"
+		text-transform: uppercase
+		color: $color-input-label
+
+	&--has-value &
+		&-input
+			padding: 1.5em 1em 0.5em 1em
+
+		&-label
+			display: block
+			animation: fadeInLabel 0.2s both

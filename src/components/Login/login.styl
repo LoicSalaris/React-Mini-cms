@@ -1,0 +1,43 @@
+@import "~/styles/vars"
+
+.app-login
+	color: $color-text
+	max-width: 360px
+
+	&-title
+		color: $color-title
+		font-family: Cinzel
+		font-size: 1.6em
+		text-transform: lowercase
+
+	&-desc
+		font-size: 1.1em
+		line-height: 1.4
+		margin: .25em 0
+
+	&-form
+		margin: 1em 0
+
+		&-submit
+			background: $color-button-background
+			border: 0
+			border-radius: 0
+			color: $color-button
+			font-size: 1em
+			display: block
+			text-transform: uppercase
+			height: 3.3em
+			width: 100%
+
+			&.app-form-submit--login
+				display: flex
+				align-items: center
+				justify-content: center
+
+				&::before
+					content: ""
+					background: url("./assets/images/cat.svg") no-repeat bottom left
+					background-size: contain
+					height: 1.5em
+					width: 1.5em
+					margin-right: .6em

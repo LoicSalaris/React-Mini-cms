@@ -1,0 +1,30 @@
+@import "~/styles/vars"
+
+@keyframes fadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+.app
+	color: $color-text
+	max-width: 360px
+	margin: 3em auto
+
+	&-link
+		color: $color-link
+		cursor: pointer
+		display: block
+		font-size: 1.1em
+		margin: 1em 0
+		text-align: center
+		text-decoration: underline
+
+	&-error
+		background: lighten($color-error, 40)
+		color: $color-error
+		text-align: center
+		padding: 0.75em 0.5em
+		margin: 0.25em 0
+		text-transform: uppercase
+		animation: fadeIn 0.2s both

@@ -1,0 +1,32 @@
+@import "~/styles/vars"
+
+.app-blocEditor
+  display: none
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 5px 10px
+  font-size: 1rem
+  font-weight: initial
+  background: $color-blocEditor-background
+  border-radius: 6px
+
+// L'ordre est important !
+.app-bloc:hover
+  .app-blocEditor
+    display: block
+
+.app-blocEditor-actions
+  list-style-type: none !important
+  margin: 0 !important
+
+.app-blocEditor-action
+  display: inline-block !important
+  margin-right: 1em !important
+  color: $color-blocAction
+  font-size: 1.25rem
+
+  &:hover
+    color: $color-blocAction--hovered
